@@ -8,6 +8,10 @@ app = Flask(__name__)
 # Allow only Netlify frontend to access the API
 CORS(app, origins=["https://space-debris.netlify.app"])
 
+@app.route('/')
+def home():
+    return jsonify({"message": "Space Debris API is running"})
+
 @app.route('/api/space-debris', methods=['GET'])
 def get_space_debris():
     token = "IjUxNDg2NGJhLTE4YzYtNGMyNi1hYjhiLWY2NWQ2ZWI2ZmZjNSI.oPVneREPBKjxLTPiXxoNoSL1Q0U"
