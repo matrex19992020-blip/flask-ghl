@@ -4,4 +4,3 @@ webdriver-manager
 gunicorn
 Flask_CORS
 jsonify
-os
